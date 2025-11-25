@@ -8,7 +8,6 @@ export class Product {
   price: number;
   discountPercentage: number;
   rating: number;
-  taxPercentage: number;
 
   constructor(
     id: number,
@@ -17,20 +16,16 @@ export class Product {
     category: string,
     price: number,
     discountPercentage: number,
-    rating: number,
-    taxPercentage: number = 0.0475
+    rating: number
   ) {
     this.id = id;
     this.title = title;
     this.description = description;
     this.category = category;
     this.price = price;
-    if (category == "grocery") {
-      discountPercentage == 0.03;
-    }
+
     this.discountPercentage = discountPercentage;
     this.rating = rating;
-    this.taxPercentage = taxPercentage;
   }
 
   getPriceWithDiscount = (): number => {
