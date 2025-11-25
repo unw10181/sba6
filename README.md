@@ -1,0 +1,4 @@
+I implemented Typescript features by directly asserting the return types for each of the functions, variables, and parameters. The object oriented principles implemented in the program were inheritence, encapsulation, and abstraction. Inheritance was utilized by extending the handlError class from the Error Class. I incorporated 
+The challenges that I encountered were how to formulate to fetch logic for the 2 different APIS. Also needed to formulate try catch errors accordingly. Then chain the promises traditionally vs using async syntax. I overcame these challenges by returning back to 
+
+https://github.com/unw10181/sba6
