@@ -4,13 +4,24 @@ async function retrieveById(num: number) {
   try {
     const response = await fetch(`https://dummyjson.com/products/${num}`);
     if (!response.ok) {
-      throw new handlerError("");
+      throw new handlerError("Failed to retrieve by ID");
     }
-  } catch (error) {}
+    const data = response.json();
+    return data;
+  } catch (error) {
+    throw new handlerError("");
+  }
 }
 
-async function retrieveAllProducts() {
+async function retrieveAllProducts(): Promise<string> {
   try {
-    fetch(`https://dummyjson.com/products`);
-  } catch (error) {}
+   const response =  await fetch(`https://dummyjson.com/products`);
+   if (!response.ok) {
+    throw new handlerError("Failed to retrieve all Products");
+   }
+   const data = response.json();
+   return data;
+  } catch (error) {
+    throw new handlerError("Network Error: " + error)
+  }
 }
