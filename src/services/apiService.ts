@@ -1,6 +1,6 @@
 import { handlerError } from "../utils/errorHandler";
 
-async function retrieveById(num: number) {
+export async function retrieveById(num: number) {
   try {
     const response = await fetch(`https://dummyjson.com/products/${num}`);
     if (!response.ok) {
@@ -13,7 +13,7 @@ async function retrieveById(num: number) {
   }
 }
 
-async function retrieveAllProducts(): Promise<string> {
+export async function retrieveAllProducts(): Promise<string> {
   try {
    const response =  await fetch(`https://dummyjson.com/products`);
    if (!response.ok) {
